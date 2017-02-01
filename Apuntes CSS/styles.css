@@ -1,0 +1,68 @@
+body{
+	background:#222;
+	font-family:sans-serif;
+	margin:0px;
+	padding:0px;
+
+}
+ul{
+	padding:0px;
+}
+h1{
+	text-align: center;
+	color: #fff;
+	margin-bottom: 2em;
+}
+h3, p{
+	display:inline;
+	margin:2px;
+}
+pre{
+	margin:2px 2px -8px 20px;
+}
+
+/*Selectores cuya clase comienzan por*/
+li[class^="accordion_item"] {
+	list-style-type:none; 
+	color:#fff;
+	background:#111;
+	line-height:2.8;
+	padding:0 1em;
+	font-size:1.3em;
+	margin:0;
+	border-bottom:1px solid rgba(#fff,.05);
+	box-shadow:0 -1px 0 0 #000 inset;
+	text-shadow:1px 1px #000;
+	cursor:pointer;
+}
+.accordion_subitem {
+	list-style-type:none; 
+	display:none;
+	margin:0;
+	background:#fff;
+	padding:1em 1em 1.5em;
+
+}
+.accordion {
+	width:70%;
+	margin:auto;
+}
+.accordion_title {
+	color:#fff;
+	background:#111;
+	line-height:2.8;
+	padding:0 1em;
+	font-size:1.3em;
+	margin:0;
+	border-bottom:1px solid rgba(#fff,.05);
+	box-shadow:0 -1px 0 0 #000 inset;
+	text-shadow:1px 1px #000;
+	cursor:pointer;
+}
+.accordion_content {
+	display:none;
+	margin:0;
+	background:#fff;
+	padding:1em 1em 1.5em;
+
+}

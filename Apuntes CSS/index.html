@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport">
+	<script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+	<title>Accordion menu</title>
+	<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+	<h1>Accordion menu</h1>
+	<nav class="accordion">
+		<ul class="accordion_container">
+			<li class="accordion_item"><a>Item 1</a></li>
+			<li class="accordion_item"><a>Item 2</a>
+				<ul class="accordion_subitem">
+					<li><a>Sub-item 1</a></li>
+					<li><a>Sub-item 2</a></li>
+					<li><a>Sub-item 3</a></li>
+				</ul>
+			</li>
+			<li class="accordion_item"><a>Item 3</a>
+				<ul class="accordion_subitem">
+					<li><a>Sub-item 1</a></li>
+					<li><a>Sub-item 2</a></li>
+					<li><a>Sub-item 3</a></li>
+				</ul>
+			</li>
+			<li class="accordion_item"><a>Item 4</a>
+				<ul class="accordion_subitem">
+					<li><a>Sub-item 1</a></li>
+					<li><a>Sub-item 2</a></li>
+					<li><a>Sub-item 3</a></li>
+				</ul>
+			</li>
+		</ul>
+	</nav>
+	<div class="accordion">
+		<div class="accordion_container">
+			<h2 class="accordion_title">Selectores</h2>
+			<div class="accordion_content">
+				<h3>Selector universal - </h3>
+				<p>Se utiliza para seleccionar todos los elementos de la página.</p>
+				<pre>
+* {
+	margin: 0;
+	padding: 0;
+}
+				</pre>
+				<h3>Selector de tipo o etiqueta - </h3>
+				<p>Selecciona todos los elementos de la página cuya etiqueta HTML coincide con el valor del selector.</p>
+				<pre>
+h1 { color: red; }
+h2 { color: red; }
+				</pre>
+				<p>ó en este caso, CSS permite agrupar todas las reglas individuales en una sola regla con un selector múltiple. </p>
+				<pre>
+h1,h2 { color: red; }
+				</pre>
+				<h3>Selector descendente - </h3>
+				<p>Selecciona los elementos que se encuentran dentro de otros elementos. </p>
+				<pre>
+p span { color: red; } 
+	
+<span><<span>p></span></span>
+	<span>...</span>
+	<span><<span>span>texto1<</span>/span></span> 
+	<span>...</span>
+	<span><<span>a href="">...<<span>span>texto2<</span>/span><</span>/a></span>
+	<span>...</span>
+<span><<span>/p></span></span>
+				</pre>
+				<h3>Selector de clase - </h3>
+				<p>Selecciona los elementos que poseen esa misma clase. </p>
+				<pre>
+.destacado { color: red; } 
+				</pre>
+				<p>afectaría a todos los elementos con clase .destacado</p>
+				<pre>
+<span><<span>body></span></span>
+	<span><<span>p class="destacado">Lorem ipsum dolor sit amet...<</span>/p></span>
+	<span><<span>p>Nunc sed lacus et <<span>a href="#" class="destacado">est adipiscing<</span>a> accumsan...<</span>/p></span>
+	<span><<span>p>Class aptent taciti <<span>em class="destacado">sociosqu ad<</span>/em> litora...<</span>/p></span>
+<span><<span>/body></span></span>
+				</pre>
+				<h3>Selector de clase + de tipo o etiqueta - </h3>
+				<p>Selecciona las etiquetas que a su vez poseen esa misma clase. </p>
+				<pre>
+p.destacado { color: red; } 
+				</pre>
+				<p>sólo afectaría al primer parrafo. </p>
+				<pre>
+<span><<span>body></span></span>
+	<span><<span>p class="destacado">Lorem ipsum dolor sit amet...<</span>/p></span>
+	<span><<span>p>Nunc sed lacus et <<span>a href="#" class="destacado">est adipiscing<</span>a> accumsan...<</span>/p></span>
+	<span><<span>p>Class aptent taciti <<span>em class="destacado">sociosqu ad<</span>/em> litora...<</span>/p></span>
+<span><<span>/body></span></span>
+
+/* Todos los elementos de tipo "p" con atributo class="aviso" */
+p.aviso { ... }
+ 
+/* Todos los elementos con atributo class="aviso" que estén dentro
+   de cualquier elemento de tipo "p" */
+p .aviso { ... }
+ 
+/* Todos los elementos "p" de la página y todos los elementos con
+   atributo class="aviso" de la página */
+p, .aviso { ... }
+				</pre>
+			</div>
+		</div>
+		<div class="accordion_container">
+			<h2 class="accordion_title">Título 2</h2>
+			<p class="accordion_content">Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen. No sólo sobrevivió 500 años, sino que tambien ingresó como texto de relleno en documentos electrónicos, quedando esencialmente igual al original. Fue popularizado en los 60s con la creación de las hojas "Letraset", las cuales contenian pasajes de Lorem Ipsum, y más recientemente con software de autoedición, como por ejemplo Aldus PageMaker, el cual incluye versiones de Lorem Ipsum.</p>
+		</div>
+		<div class="accordion_container">
+			<h2 class="accordion_title">Título 3</h2>
+			<p class="accordion_content">Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen. No sólo sobrevivió 500 años, sino que tambien ingresó como texto de relleno en documentos electrónicos, quedando esencialmente igual al original. Fue popularizado en los 60s con la creación de las hojas "Letraset", las cuales contenian pasajes de Lorem Ipsum, y más recientemente con software de autoedición, como por ejemplo Aldus PageMaker, el cual incluye versiones de Lorem Ipsum.</p>
+		</div>
+		<script src="script.js"></script>
+</body>
+</html>
